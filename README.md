@@ -1,38 +1,43 @@
-# eShop Backend API 🛒
+# eShop Full-Stack Backend API 🚀
 
-A robust and scalable E-commerce Backend RESTful API built with **ASP.NET Core 8**. This project implements a complete shopping experience with a focus on clean architecture, security, and performance.
+A production-ready RESTful API for E-commerce platforms built with **ASP.NET Core 9**. This project implements advanced security patterns, complex business logic, and high-performance data handling.
 
-## 🚀 Features
+## 🌟 Core Modules & Features
 
-### 👤 User Module
-* **Authentication & Authorization:** Secure access using **JWT Tokens** and Identity Framework.
-* **Profile Management:** Users can update their info (Address, Phone) and change passwords securely.
-* **Shopping Cart:** Full cart functionality (Add, Remove, Update quantities).
-* **Order System:** Transaction-based ordering system to ensure data integrity.
-* **Review System:** Users can rate and review products they have purchased.
+### 🔐 Advanced Authentication (Identity)
+* **Complete Auth Cycle:** Register, Login, and **Logout**.
+* **Account Security:** **OTP Verification**, **Forgot Password**, and **Reset Password** via Email Service.
+* **Session Management:** Implemented **JWT Access Tokens** with **Refresh Token** logic for secure and seamless user sessions.
 
-### 🛡️ Admin Dashboard
-* **Inventory Management:** Complete CRUD operations for products and categories.
-* **Order Tracking:** Ability to update order status (Pending, Shipped, Delivered, Cancelled).
-* **Real-time Statistics:** Dashboard stats showing Total Revenue, Order counts, and Top Selling products.
-* **User Management:** Ability to manage user accounts.
+### 👤 Profile & Social
+* **User Profile:** Managed user data updates and secure **Change Password** functionality.
+* **Review System:** Star rating and commenting system with **Verified Purchase** logic.
 
-## 🛠️ Tech Stack
-* **Framework:** .NET 8 (Web API)
-* **Database:** SQL Server
-* **ORM:** Entity Framework Core
-* **Security:** JWT Authentication & ASP.NET Core Identity
-* **Mapping:** AutoMapper
-* **Documentation:** Swagger UI (OpenAPI)
-* **Patterns:** Service Pattern, Repository-like logic, Middleware, Global Exception Handling.
+### 🛒 E-Commerce Engine
+* **Smart Cart:** Full Cart management (Add, Update, Delete items) synchronized with user accounts.
+* **Order Orchestration:** * **Transaction-based** ordering system to ensure data consistency.
+    * Administrative control for updating order statuses.
+    * **Dashboard Stats:** Real-time analytics for Admin (Revenue, Orders, and Top Selling Products).
 
-## 📂 Architecture
-The project follows a modular structure to ensure separation of concerns:
-- **Controllers:** Handle HTTP requests and responses.
-- **Services:** Contain the core business logic.
-- **Data (DbContext):** Handles database connectivity and migrations.
-- **DTOs:** Data Transfer Objects for secure and optimized data flow.
-- **Middlewares:** Global exception handling and custom pipelines.
+### 📦 Catalog Management
+* **Product & Category CRUD:** Full administrative control over the catalog.
+* **Data Optimization:** Implemented **Pagination, Filtering, Search, and Sorting** to handle large product lists.
+* **Image Handling:** Integrated gallery image management and file cleanup logic.
+
+## 🛠️ Technical Implementation
+* **Framework:** .NET 9 (Web API)
+* **Database:** SQL Server using **Entity Framework Core**.
+* **Mapping:** **AutoMapper** for clean DTO/Entity transformations.
+* **Reliability:** **Global Exception Handling Middleware** and **Fluent Validation**.
+* **Documentation:** Fully documented via **Swagger UI**.
+
+## 📂 Project Structure
+Following Clean Architecture principles:
+- `Controllers`: Handles API routing and requests.
+- `Services`: Contains the core business rules and logic.
+- `Models & Dtos`: Data structures and transfer objects.
+- `Middlewares`: Custom logic for errors and security.
+- `Helpers`: Utility classes for Email and JWT logic. Global exception handling and custom pipelines.
 
 ## 🔧 How to Run
 1. Clone the repository.
