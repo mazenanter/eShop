@@ -49,6 +49,13 @@ Following Clean Architecture principles:
   <img src="Screenshots/profile&review.png" width="45%" />
 </p>
 
+## 🚀 API Testing (Postman)
+To test the API easily, you can use our Postman Collection:
+1. Download the JSON file from the `Postman` folder in this repo.
+2. Import it into Postman.
+3. Set the `baseUrl` variable to your local running URL.
+4. Run the **Login** request; the Auth Token will be automatically saved for all subsequent requests.
+
 ## 🔧 How to Run
 1. Clone the repository.
 2. Update the connection string in `appsettings.json`.
