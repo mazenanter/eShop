@@ -39,6 +39,16 @@ Following Clean Architecture principles:
 - `Middlewares`: Custom logic for errors and security.
 - `Helpers`: Utility classes for Email and JWT logic. Global exception handling and custom pipelines.
 
+## 📸 API Documentation Preview (Swagger)
+<p align="center">
+  <img src="Screenshots/auth.png" width="45%" />
+  <img src="Screenshots/order&product.png" width="45%" />
+</p>
+<p align="center">
+  <img src="Screenshots/cart & category.png" width="45%" />
+  <img src="Screenshots/profile&review.png" width="45%" />
+</p>
+
 ## 🔧 How to Run
 1. Clone the repository.
 2. Update the connection string in `appsettings.json`.
