@@ -33,6 +33,17 @@ namespace eShop.Controllers
                 return BadRequest(result);
             return StatusCode(201, result);
         }
+        /// <summary>
+        /// Retrieves a paginated list of products with support for Search, Filtering, and Sorting.
+        /// </summary>
+        /// <param name="pageNumber">Current page index (starting from 1).</param>
+        /// <param name="pageSize">Number of items per page.</param>
+        /// <param name="search">Search by product name or description.</param>
+        /// <param name="categoryId">get product by categoryId.</param>
+        /// <param name="minPrice">sort products by minPrice</param>
+        /// <param name="maxPrice">sort products by maxPrice.</param>
+        /// <param name="sortBy">sort product decs or asc using [price_asc,price_desc]</param>
+        [HttpGet]
         [HttpGet]
         public async Task<IActionResult> GetAll(
            [FromQuery] string? search ,

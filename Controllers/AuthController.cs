@@ -15,7 +15,9 @@ namespace eShop.Controllers
         {
             _authService = authService;
         }
-
+        /// <summary>
+        /// Registers a new user and sends an OTP to their email.
+        /// </summary>
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto registerDto)
         {
@@ -60,6 +62,9 @@ namespace eShop.Controllers
             }
             return StatusCode(200, result);
         }
+        /// <summary>
+        /// Authenticates a user and returns Access & Refresh Tokens.
+        /// </summary>
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
@@ -78,6 +83,9 @@ namespace eShop.Controllers
             }
             return StatusCode(200, result);
         }
+        /// <summary>
+        /// Generates a new Access Token using a valid Refresh Token.
+        /// </summary>
         [HttpPost("refresh-token")]
         public async Task<IActionResult> RefreshToken([FromBody]RefreshTokenDto dto)
         {

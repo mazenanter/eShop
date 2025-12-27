@@ -15,7 +15,10 @@ namespace eShop.Controllers
         {
             _orderService = orderService;
         }
-
+        /// <summary>
+        /// Converts the current user's cart into a formal order.
+        /// </summary>
+        /// <remarks>This process uses Database Transactions to ensure stock is deducted correctly.</remarks>
         [HttpPost]
         [Authorize(Roles ="User")]
         public async Task<IActionResult> PlaceOrder(OrderDto dto)
@@ -71,6 +74,9 @@ namespace eShop.Controllers
             if (!result.IsSuccess) return BadRequest(result);
             return StatusCode(200, result);
         }
+        /// <summary>
+        /// [Admin Only] Retrieves global statistics for the dashboard.
+        /// </summary>
         [HttpGet("stats")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetDashboardStats()
